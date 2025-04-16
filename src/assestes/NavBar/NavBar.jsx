@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavCss from './NavBar.module.css';
-import 'E:\\Coding\\React\\Class_5\\src\\App.css'
+
 const NavBar = () => {
   const section = useRef();
   let visible = true;
