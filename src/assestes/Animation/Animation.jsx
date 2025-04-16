@@ -11,7 +11,7 @@ const Animation = () => {
         if (i.current > arr.length) {
             clearInterval(running);
         }
-    }, 500);
+    }, 250);
 
     return (
         <div className={AnimationCss.outer}>
