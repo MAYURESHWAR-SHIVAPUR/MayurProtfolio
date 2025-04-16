@@ -41,6 +41,3 @@ body {
     width: fit-content;
 }
 
-*::-webkit-scrollbar {
-    display: none;
-}
