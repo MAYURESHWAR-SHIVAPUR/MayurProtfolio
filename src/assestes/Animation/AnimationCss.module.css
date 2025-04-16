@@ -1,0 +1,182 @@
+.outer {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    background: var(--bg-other);
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    animation: shows 4s ease-in 5s 1 forwards;
+}
+
+@keyframes shows {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 1000px;
+        display: none;
+    }
+}
+
+.outer section {
+    margin: 20px 30%;
+    width: 100%;
+}
+
+.outer button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #121619;
+    margin-right: 5%;
+    background-color: black;
+}
+
+.outer h1 {
+    font-stretch: extra-expanded;
+    font-size: 3.5rem;
+    margin: 0;
+    margin: 1px 0;
+}
+
+.outer .sec_line {
+    font-weight: bolder;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: var(--text-higlight);
+    font-size: 4rem;
+}
+
+.outer .TypingText {
+    width: fit-content;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    margin: 50px auto;
+    font-size: larger;
+    border-radius: 15px;
+    color: white;
+}
+
+section i::before {
+    font-size: large;
+    color: white;
+}
+
+@media (max-width : 320px) {
+    .outer {
+        width: 100%;
+        font-size: small;
+        padding: 20px 10px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: block;
+    }
+
+    .outer section {
+        margin-left: 20%;
+    }
+
+    .outer h1 {
+        font-size: xx-large;
+    }
+
+    .outer .sec_line {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:320px) and (max-width : 425px) {
+    .outer {
+        width: 100%;
+        height: 100%;
+        font-size: small;
+        padding: 20px 10px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: block;
+    }
+
+    .outer section {
+        margin-left: 20%;
+    }
+
+    .outer h1 {
+        font-size: xx-large;
+    }
+
+    .outer .sec_line {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:500px) and (max-width : 1024px) {
+    .outer {
+        width: 100%;
+        padding: 20px 10px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: block;
+    }
+
+    .outer section {
+        width: 100%;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outer section button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .outer h1 {
+        font-size: 3rem;
+    }
+
+    .outer .sec_line {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width : 2560px) {
+    .outer {
+        width: 100%;
+        height: 1120px;
+        padding: 20px 10px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: block;
+    }
+
+    .outer section {
+        width: 100%;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outer section button {
+        height: 150px;
+        width: 150px;
+    }
+
+    .outer h1 {
+        font-size: 6rem;
+    }
+
+    .outer .sec_line {
+        font-size: 8rem;
+    }
+
+    .outer .TypingText {
+        font-size: 3.5rem;
+    }
+}

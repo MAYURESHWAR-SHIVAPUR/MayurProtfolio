@@ -1,0 +1,132 @@
+.outer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 110px;
+    font-size: large;
+    display: inline-block;
+    height: 26px;
+}
+
+/* #67ce5f  light green */
+/* #3c6d41  dark green */
+.outer {
+    height: 80px;
+    width: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    border-bottom: 1px solid var(--text-color);
+    overflow-x: hidden;
+}
+
+.outer h1 {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.outer h1,
+h3,
+h5,
+p {
+    margin: 0;
+}
+
+.outer .Active {
+    color: var(--text-higlight);
+    border-bottom: 2px solid;
+}
+
+.outer section {
+    display: flex;
+    align-items: end;
+}
+
+.fonts {
+    font-family: Verdana, Tahoma;
+}
+
+.outer button {
+    visibility: hidden;
+    height: 30px;
+    width: 60px;
+    background-color: transparent;
+    color: var(--text-higlight);
+    outline: none;
+    border: 2px solid transparent;
+    font-size: xx-large;
+    position: relative;
+    right: 0%;
+}
+
+
+@media (max-width:699px) {
+    .outer {
+        /* position: relative; */
+        height: 60px;
+        width: 95%;
+        font-size: xx-small;
+        padding: 0 10px;
+        overflow-x: hidden;
+    }
+
+    .outer button {
+        visibility: visible;
+    }
+
+    .outer section {
+        visibility: hidden;
+        position: absolute;
+        width: 80px;
+        display: block;
+        height: fit-content;
+        top: 67px;
+        right: -14px;
+        z-index: 10;
+        background-color: var(--bg-color);
+        padding-left: 10px;
+        border: 2px solid;
+        border-radius: 15px;
+    }
+
+    .outer section a {
+        display: block;
+        margin-top: 5px;
+        color: var(--text-color);
+    }
+}
+
+@media (min-width:700px) and (max-width:770px) {
+    .outer {
+        position: relative;
+        width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+
+    .outer section {
+        visibility: visible;
+    }
+
+    .outer section a {
+        font-size: medium;
+        margin-right: 50px;
+    }
+}
+
+
+@media (min-width:771px) {
+    .outer {
+        position: relative;
+        width: calc(100% - 20px);
+        padding: 0 10px;
+        height: 100px;
+    }
+
+    .outer section {
+        visibility: visible;
+    }
+
+    .outer section a {
+        font-size: larger;
+        margin-right: 50px;
+    }
+}

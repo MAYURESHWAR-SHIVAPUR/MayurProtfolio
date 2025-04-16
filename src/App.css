@@ -1,0 +1,49 @@
+* {
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    background-color: var(--bg-color);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-radial);
+    overflow: hidden;
+}
+
+.Active {
+    color: var(--text-higlight);
+}
+
+.errors {
+    text-align: center;
+    color: orangered;
+    margin-top: 55px;
+}
+
+.color {
+    color: var(--text-higlight);
+
+    &:focus {
+        color: var(--text-color);
+    }
+}
+
+.font {
+    text-align: start;
+    width: fit-content;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+body{
+    overflow-x: hidden;
+}

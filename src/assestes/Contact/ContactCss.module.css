@@ -1,0 +1,46 @@
+.outer {
+    padding: 10px;
+}
+
+h1 {
+    text-align: left;
+}
+
+.child1 {
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+}
+
+.box {
+    width: 10%;
+    height: fit-content;
+    background-color: black;
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.box i {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    font-size: xx-large;
+}
+
+.box a {
+    text-decoration: none;
+    font-size: large;
+}

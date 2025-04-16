@@ -1,0 +1,140 @@
+.outer {
+    padding: 15px;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 811px;
+    transition: all 0.3s ease-in;
+    flex-wrap: wrap;
+}
+
+.frontend {
+    height: 330px;
+    width: 250px;
+    background-color: var(--bg-color);
+}
+
+
+.fonts {
+    font-family: Verdana, Tahoma;
+    color: var(--text-higlight);
+}
+
+h1 {
+    text-align: center;
+}
+
+.outer button {
+    width: 102px;
+    border-radius: 15px;
+    padding: 0px 23px;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-higlight);
+    height: 30px;
+    font-weight: bolder;
+    margin-right: 15px;
+    transition: all 0.3s ease-in;
+    border: 2px solid var(--text-higlight);
+
+    &:hover {
+        background-color: var(--text-higlight);
+        color: var(--bg-color);
+    }
+}
+
+.outer .download {
+    width: 125px;
+    margin: 0;
+}
+
+.outer .Reading {
+    position: absolute;
+    top: 20%;
+    left: auto;
+    background-repeat: no-repeat;
+}
+
+.outer .image {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.outer .showButton {
+    margin-left: 35%;
+}
+
+#fullstack {
+    background-image: url(./fullstack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#frontend {
+    background-image: url(./frontend.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: optimizeSpeed;
+}
+
+@media(max-width:426px) {
+    .outer {
+        position: relative;
+        align-items: center;
+        width: calc(100% - 15px);
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .resume {
+        margin: 0;
+        margin-bottom: 150px;
+    }
+
+    .download {
+        font-size: smaller;
+        width: fit-content;
+    }
+
+    .Reading {
+        margin-left: 10%;
+        background-size: contain;
+        width: 80%;
+        height: 500px;
+    }
+}
+
+@media (min-width:427px) and (max-width:1156px) {
+    .outer {
+        height: fit-content;
+    }
+
+    .resume {
+        margin-bottom: 150px;
+        margin: 0 15px;
+
+    }
+
+    .Reading {
+        height: 811px;
+        width: 574px;
+    }
+
+    button {
+        font-size: larger;
+    }
+}
+
+@media (min-width:1157px){
+    .outer{
+        height: 900px;
+    }
+    .Reading {
+        height: 810px;
+        width: 573px;
+    }
+}

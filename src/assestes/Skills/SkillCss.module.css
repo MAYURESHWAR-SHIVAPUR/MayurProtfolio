@@ -1,0 +1,44 @@
+.outer {
+    padding: 25px 30px;
+    background: var(--bg-radial);
+    margin: 0;
+    width: calc(100% - 60px);
+}
+
+.block {
+    position: relative;
+    height: fit-content;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    padding: 0 15px;
+    background-color: var(--skill-bg);
+    border-radius: 15px;
+    margin: 30px;
+    text-align: center;
+    transition: all ease-in-out 1s;
+    box-shadow: 10px 15px 25px -10px var(--text-color);
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.block img {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.outerblock {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.block h3{
+    font-size: x-large;
+}
+.outer h1{
+    color: var(--text-higlight);
+    font-size: 3rem;
+}

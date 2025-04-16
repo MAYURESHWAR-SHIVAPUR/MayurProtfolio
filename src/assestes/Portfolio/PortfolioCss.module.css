@@ -1,0 +1,69 @@
+.Nav_outer {
+    position: relative;
+    height: 60px;
+    margin: 28px 0px;
+    background: var(--bg-radial);
+    padding: 10px 0;
+    width: 100%;
+    margin: auto;
+}
+
+/* 7f7f7f */
+.Nav_outer a {
+    font-size: x-large;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+    height: 70%;
+    width: 30%;
+    display: inline-block;
+    margin-left: 3%;
+    text-align: center;
+    padding-top: 15px;
+    border: 2px solid transparent;
+    transition: all 0.7s;
+}
+
+.Nav_outer .Active {
+    color: var(--bg-higlight);
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: #0000ff6a;
+}
+
+@media (max-width:584px) {
+    .Nav_outer {
+        width: 100%;
+    }
+
+    .Nav_outer a {
+        position: relative;
+        width: 20%;
+        margin-left: 10%;
+        overflow-y: hidden;
+        font-size: smaller;
+        height: 50px;
+    }
+}
+
+@media (min-width:585px) and (max-width:760px) {
+    .Nav_outer {
+        width: 100%;
+    }
+
+    .Nav_outer a {
+        position: relative;
+        width: 20%;
+        margin-left: 10%;
+        overflow-y: hidden;
+        font-size: large;
+        height: 50px;
+    }
+}
+
+@media (min-width:761px) and (max-width:1065px) {
+    .Nav_outer a {
+        font-size: large;
+        width: 20%;
+        margin-left: 10%;
+    }
+}

@@ -1,0 +1,173 @@
+.outer {
+    background: var(--bg-radial);
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    padding-top: 20px;
+    display: block;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.child_1 {
+    height: fit-content;
+    /* width: 40%; */
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 6%;
+    display: inline-block;
+    animation: slides 2s ease-in-out 0s 1 forwards;
+}
+
+@keyframes slides {
+    0% {
+        margin-left: -50%;
+    }
+
+    100% {
+        margin-left: 6%;
+    }
+}
+
+.mobile {
+    border-radius: 15px;
+    background-color: aqua;
+    display: inline-block;
+    margin-left: 8%;
+    margin-bottom: 20px;
+}
+
+/* raj74av */
+.laptop {
+    margin-bottom: 20px;
+    margin-left: 15%;
+    border-radius: 15px;
+    background-color: pink;
+    display: inline-block;
+}
+
+.outer h3 {
+    text-align: center;
+}
+
+.h3_links {
+    font-size: medium;
+    font-weight: lighter;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.moreDetails a {
+    font-size: small;
+    margin-right: 5%;
+    width: fit-content;
+}
+
+.child_1 h1 {
+    color: var(--text-higlight);
+}
+
+.moreDetails span {
+    color: orange;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+@media (max-width:426px) {
+    .outer {
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .child_1 {
+        position: relative;
+        display: block;
+        width: 100%;
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .mobile,
+    .laptop {
+        display: block;
+        aspect-ratio: 16/9;
+        max-width: 80%;
+        margin: 50px auto;
+    }
+
+    .mobile {
+        aspect-ratio: 9/20;
+        max-width: 50%;
+        margin: 50px auto;
+    }
+
+    p {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: smaller;
+    }
+}
+
+@media (min-width:427px) and (max-width:1030px) {
+    .outer {
+        width: calc(100% - 20px);
+        padding: 20px;
+    }
+
+    .child_1 {
+        position: relative;
+        display: block;
+        width: 100%;
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .laptop {
+        display: inline-block;
+        aspect-ratio: 16/9;
+        min-width: 50%;
+        max-width: 80%;
+        margin: 50px 10%;
+    }
+
+    .mobile {
+        aspect-ratio: 9/20;
+        min-width: 20%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width:1031px) {
+    .outer {
+        width: calc(100% - 20px);
+        padding: 20px;
+    }
+
+    .child_1 {
+        position: relative;
+        margin: 20px 0;
+        display: inline-block;
+        width: 40%;
+    }
+
+    .laptop {
+        display: inline-block;
+        aspect-ratio: 16/9;
+        min-width: 50%;
+        max-width: 80%;
+        margin: 50px 10%;
+    }
+
+    .mobile {
+        aspect-ratio: 9/20;
+        min-width: 20%;
+        max-width: 50%;
+    }
+}
