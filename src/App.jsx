@@ -11,6 +11,7 @@ import Certificate from './assestes/Certificate/Certificate'
 import Skills from './assestes/Skills/Skills'
 import Errors from './assestes/Error/Error'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.css';
 
 const router = createBrowserRouter([
   {
