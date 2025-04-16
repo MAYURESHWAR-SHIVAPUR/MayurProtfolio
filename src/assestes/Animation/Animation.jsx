@@ -7,11 +7,11 @@ const Animation = () => {
     let i = useRef(0);
     const running = setInterval(() => {
         lines.current.textContent = arr.slice(0, i.current) + "|";
-        i.current = i.current + 1
+        i.current = i.current + 2
         if (i.current > arr.length) {
             clearInterval(running);
         }
-    }, 250);
+    }, 500);
 
     return (
         <div className={AnimationCss.outer}>
