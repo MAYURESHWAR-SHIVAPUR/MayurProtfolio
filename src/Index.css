@@ -32,4 +32,15 @@
             --skill-bg: #3D2B1F;
         }
     }
+    @media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: white;
+        --bg-radial: radial-gradient(circle, white, skyblue);
+        --bg-other: var(--bg-radial);
+        --text-color: black;
+        --text-higlight: #0F5298;
+        --proj-color: linear-gradient(to right, white, skyblue, white);
+        --skill-bg: white;
+    }
+    }
 }
