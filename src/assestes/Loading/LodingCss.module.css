@@ -29,7 +29,7 @@
 
 .center h1 {
     text-align: center;
-    color: var(--bg-color);
+    color: white;
     animation: bounce 3s ease-in-out 0s infinite;
 }
 
