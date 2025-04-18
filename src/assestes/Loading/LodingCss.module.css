@@ -58,7 +58,6 @@
         height: 630px;
         width: 100%;
         overflow-y: hidden;
-        background: linear-gradient(to bottom, var(--bg-color)28%, green 30%);
         transition: all ease-in-out 2s;
     }
 
@@ -72,11 +71,6 @@
 }
 
 @media (min-width:431px) {
-    .outer {
-        background: linear-gradient(to bottom, var(--bg-color)28%, green 30%);
-
-    }
-
     .well {
         left: 50%;
     }
