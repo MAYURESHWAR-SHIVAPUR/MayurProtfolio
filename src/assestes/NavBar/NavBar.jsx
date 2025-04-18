@@ -34,8 +34,8 @@ const NavBar = () => {
   return (
     <div className={NavCss.outer}>
       <h1> <b className={NavCss.fonts}>Portfolio</b> </h1>
-      <button style={{ color: 'white', fontWeight: "bolder" }} onClick={handelclick}>
-      <i class="fa-solid fa-bars"></i>
+      <button onClick={handelclick}>
+         <i class="fa-solid fa-bars"></i>
       </button>
       <section ref={section}>
         <NavLink className={({ isActive }) => isActive ? NavCss.Active : ""} to='/'>Home</NavLink>
