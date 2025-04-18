@@ -57,7 +57,9 @@ p {
     position: relative;
     right: 0%;
 }
-
+i:active{
+    transformer:rotate(90deg);
+}
 
 @media (max-width:699px) {
     .outer {
