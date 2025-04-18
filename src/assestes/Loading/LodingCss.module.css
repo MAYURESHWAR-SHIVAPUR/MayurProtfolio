@@ -14,7 +14,7 @@
     height: 630px;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to bottom, var(--bg-color)28%, green 30%);
+    background: linear-gradient(to bottom, white 28%, green 30%);
     transition: all ease-in-out 2s;
     /* animation: dim 3s ease-in-out 0s 1 forwards ; */
 }
