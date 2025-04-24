@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import AnimationCss from './AnimationCss.module.css'
 
 const Animation = () => {
-    const arr = 'BY : Mayureshwar '
+    const arr = 'BY :  VARUN'
     let lines = useRef('');
     let i = useRef(0);
     const running = setInterval(() => {

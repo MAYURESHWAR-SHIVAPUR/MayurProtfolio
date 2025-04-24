@@ -49,19 +49,18 @@ const About = () => {
           working on innovative solutions and
           continuously expanding my skill set</p>
         <h2 className={AboutCss.fonts}>Educational History</h2>
-        <h3> Bachelor of Engineering (2022 - 2026)</h3>
-        <p> I am currently pursuing my Engineering degree in Computer Science at
-          Cauvery Institute of Technology, Mandya, with an expected graduation in 2026.
-          I excel in collaboration and communication, skills that set me apart and
+        <h3> Bachelor of Engineering (2021 - 2025)</h3>
+        <p> I am currently pursuing my Engineering degree in Electronis and Communication Engineering at
+          Cauvery Institute of Technology, Mandya, graduated in 2025.
+          I'm excel in collaboration and communication, skills that set me apart and
           enhance my ability to work effectively in team environments</p>
         <br />
-        <h3> High School PUC(2020 - 2022)</h3>
-        <p>I completed my Pre-University Course (PUC) at Jambagi PU College, Belagavi,
-          from 2020 to 2022, specializing in the Biology stream. During this time, I
-          developed a strong understanding of scientific concepts while also enhancing
-          my analytical and problem-solving skills. Though my focus was on biology, my
-          passion for technology led me to pursue engineering in Computer Science. This
-          diverse academic background gives me a unique perspective in the tech field.</p>
+        <h3> Pre University College (2019 - 2021)</h3>
+        <p>I completed my Pre-University Course (PUC) at STG PU College, Mandya,
+          from 2019 to 2021,with a focus on PCMB which helped to me understand science better and increased my interest in technology..</p>
+        <br />
+        <h3>SSLC (2019)</h3>
+        <p>I completed my 10th from Nirmala English High school in pandavapura, where I built a strong foundation in science and mathematics.</p>
       </div>
       <div className={AboutCss.child2}>
         <img loading='lazy' src={mayur} alt="" />

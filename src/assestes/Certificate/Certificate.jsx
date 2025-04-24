@@ -1,13 +1,9 @@
 import { Outlet } from 'react-router-dom'
 import CertificateCss from './CertificateCss.module.css';
 import img_1 from './photos/1.png';
-import img_5 from './photos/2.jpg';
+import img_2 from './photos/2.jpg';
 import img_4 from './photos/3.jpg';
 import img_3 from './photos/4.jpg';
-import img_2 from './photos/5.png';
-import img_6 from './photos/6.jpeg';
-import img_7 from './photos/7.jpg';
-import img_8 from './photos/8.jpg';
 import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loadingpage'
 
@@ -15,7 +11,7 @@ const Certificate = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const imgsource = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8];
+  const imgsource = [img_1, img_2, img_3, img_4];
 
   useEffect(() => {
     let loadedImg = 0;
@@ -39,7 +35,7 @@ const Certificate = () => {
     )
   }
 
-  const certificates = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8];
+  const certificates = [img_1, img_2, img_3, img_4];
   const cerificat = certificates.map((e) =>
     < img src={e} className={CertificateCss.child} ></img >
   );
