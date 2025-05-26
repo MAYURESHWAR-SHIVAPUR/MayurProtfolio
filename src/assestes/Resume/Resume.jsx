@@ -30,34 +30,40 @@ const Resume = () => {
       <div ref={back} className={ResumeCss.outer}>
 
         <div className={ResumeCss.resume}>
-          <div id={ResumeCss.frontend} className={ResumeCss.frontend}></div>
+          <div className={ResumeCss.frontend}>
+            <img src="./frontend_1.png" alt="" />
+            <img src="./frontend_2.png" alt="" />
+          </div>
           <h1>Frontend Resume</h1>
           <button onClick={() => show(0)}>Read</button>
           <button className={ResumeCss.download}>Download</button>
         </div>
 
         <div className={ResumeCss.resume}>
-          <div id={ResumeCss.backend} className={ResumeCss.frontend}></div>
+          <div className={ResumeCss.frontend}>
+            <img src="./fullstack_1.png" alt="" />
+            <img src="./fullstack_2.png" alt="" />
+          </div>
           <h1>Backend Resume</h1>
           <button onClick={() => show(1)}>Read</button>
           <button className={ResumeCss.download}>Download</button>
         </div>
 
         <div className={ResumeCss.resume}>
-          <div id={ResumeCss.fullstack} className={ResumeCss.frontend}></div>
+          <div className={ResumeCss.frontend}>
+            <img src="./fullstack_1.png" alt="" />
+            <img src="./fullstack_2.png" alt="" />
+          </div>
           <h1>Full Stack Resume</h1>
           <button onClick={() => { show(2) }}>Read</button>
           <button className={ResumeCss.download}>Download</button>
         </div>
 
-        <div className={ResumeCss.resume}>
-          <div id={ResumeCss.java} className={ResumeCss.frontend}></div>
-          <h1>Java Resume</h1>
-          <button onClick={() => { show(3) }}>Read</button>
-          <button className={ResumeCss.download}> Download</button>
-        </div>
         <div ref={shows} className={ResumeCss.Reading}>
-          <div className={ResumeCss.image}></div>
+          <div className={ResumeCss.image}>
+            <img src="./frontend_1.png" alt="" />
+            <img src="./frontend_2.png" alt="" />
+          </div>
           <button onClick={hide} className={ResumeCss.showButton}>Cancel</button>
         </div>
       </div>

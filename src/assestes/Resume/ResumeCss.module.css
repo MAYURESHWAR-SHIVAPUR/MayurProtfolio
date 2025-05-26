@@ -68,17 +68,15 @@ h1 {
     margin-left: 35%;
 }
 
-#fullstack {
-    background-image: url(./fullstack.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.frontend{
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
-#frontend {
-    background-image: url(./frontend.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    image-rendering: optimizeSpeed;
+.frontend img{
+    width: 100%;
 }
 
 @media(max-width:426px) {

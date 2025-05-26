@@ -64,12 +64,6 @@ const Projects = () => {
       <Cards title="👗 Fashora Shopping Website" Basic_info={info_3} ul={ul_3} moreData={moreData_1} />
       <Cards title=" TalkBridge" Basic_info={info_4} ul={ul_3} moreData={moreData_1} />
 
-      <br /><br /><hr />
-
-      <h1>Java</h1>
-      <Cards />
-      <Outlet />
-
     </div>
   )
 }
