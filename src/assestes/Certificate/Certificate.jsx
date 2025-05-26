@@ -12,7 +12,7 @@ import img_9 from './photos/9.jpg';
 import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loadingpage'
 const Certificate = () => {
-
+ 
   const [loading, setLoading] = useState(true);
 
   const imgsource = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8, img_9];
