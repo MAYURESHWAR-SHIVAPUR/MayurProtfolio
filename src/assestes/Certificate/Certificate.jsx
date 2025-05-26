@@ -4,7 +4,7 @@ import img_1 from './photos/1.jpg';
 import img_2 from './photos/2.jpg';
 import img_3 from './photos/3.jpg';
 import img_4 from './photos/4.jpeg';
-import img_5 from './photos/5.png';
+import img_5 from './photos/5.jpg';
 import img_6 from './photos/6.jpg';
 import img_7 from './photos/7.png';
 import img_8 from './photos/8.png';
