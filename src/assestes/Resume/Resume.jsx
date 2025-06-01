@@ -23,7 +23,7 @@ const Resume = () => {
     shows.current.style.visibility = "visible";
     back.current.style.visibility = "hidden";
     imgs_1.current.style.backgroundImage = `url(${arr[e]})`;
-    imgs_2.current.style.backgroundImage = `url(${arr[parseInt(e)+1]})`;
+    imgs_2.current.style.backgroundImage = `url(${arr[parseInt(e) + 1]})`;
   }
 
   useEffect(() => {
@@ -54,13 +54,13 @@ const Resume = () => {
           <button className={ResumeCss.download}>Download</button>
         </div>
 
-        <div ref={shows} className={ResumeCss.Reading}>
-          <div className={ResumeCss.image}>
-            <img ref={imgs_1} alt="" />
-            <img ref={imgs_2} alt="" />
-          </div>
-          <button onClick={hide} className={ResumeCss.showButton}>Cancel</button>
+      </div>
+      <div ref={shows} className={ResumeCss.Reading}>
+        <div className={ResumeCss.image}>
+          <img ref={imgs_1} alt="" />
+          <img ref={imgs_2} alt="" />
         </div>
+        <button onClick={hide} className={ResumeCss.showButton}>Cancel</button>
       </div>
     </>
   )
