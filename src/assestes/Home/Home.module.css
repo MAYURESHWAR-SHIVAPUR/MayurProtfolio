@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 .outer {
     display: flex;
     align-items: center;
@@ -7,6 +9,12 @@
     height: 100vh;
     position: relative;
     animation: shows 2s ease-in-out 0s 1 forwards;
+}
+
+.outer p {
+    font-weight: 300;
+    font-size: medium;
+    font-family: "Robot";
 }
 
 @keyframes shows {
@@ -226,11 +234,6 @@ i::before {
         display: none;
     }
 
-    .outer p {
-        font-weight: 300;
-        font-size: smaller;
-        font-family: sans-serif;
-    }
 
     .outer .Download {
         display: block;
@@ -280,12 +283,6 @@ i::before {
         display: none;
     }
 
-    .outer p {
-        font-weight: 300;
-        font-size: smaller;
-        font-family: sans-serif;
-    }
-
     .outer .Download {
         display: block;
         margin: 3rem 27%;
@@ -329,11 +326,6 @@ i::before {
         display: none;
     }
 
-    .outer p {
-        font-weight: 300;
-        font-size: small;
-        font-family: sans-serif;
-    }
 
     .outer .Download {
         display: block;
@@ -383,12 +375,6 @@ i::before {
 
     .outer .lines {
         display: none;
-    }
-
-    .outer p {
-        font-weight: 300;
-        font-size: medium;
-        font-family: sans-serif;
     }
 
     .outer a {
@@ -445,11 +431,6 @@ i::before {
         display: none;
     }
 
-    .outer p {
-        font-weight: 300;
-        font-size: medium;
-        font-family: sans-serif;
-    }
 
     .outer a {
         margin-left: 8%;
@@ -503,12 +484,6 @@ i::before {
 
     .outer .lines {
         display: none;
-    }
-
-    .outer p {
-        font-weight: 300;
-        font-size: medium;
-        font-family: sans-serif;
     }
 
     .outer a {

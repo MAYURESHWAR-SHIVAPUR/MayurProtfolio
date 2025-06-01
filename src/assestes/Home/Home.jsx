@@ -40,8 +40,8 @@ const Profile = () => {
         <a href="https://github.com/MAYURESHWAR-SHIVAPUR">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="">
-          <i class="https://www.linkedin.com/in/mayureshwar-shivapur-a34b25313" ></i>
+        <a href="https://www.linkedin.com/in/mayureshwar-shivapur-a34b25313">
+          <i class="fa-brands fa-linkedin"></i>
         </a>
         <a href="tel:+916360656920">
           <i class="fa-solid fa-phone-flip fa-flip-horizontal" ></i>
