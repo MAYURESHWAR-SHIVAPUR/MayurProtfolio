@@ -14,7 +14,7 @@ const Resume = () => {
   const arr = [frontend_1, frontend_2, fullstack_1, fullstack_2];
   const imgs_1 = useRef();
   const imgs_2 = useRef();
-  
+
   const imgsource = [frontend_1, frontend_2, fullstack_1, fullstack_2];
 
   useEffect(() => {
