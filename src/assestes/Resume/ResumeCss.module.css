@@ -79,6 +79,10 @@ h1 {
     width: 100%;
 }
 
+.image .showButton{
+    
+}
+
 @media(max-width:426px) {
     .outer {
         position: relative;

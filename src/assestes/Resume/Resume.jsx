@@ -1,13 +1,37 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import ResumeCss from './ResumeCss.module.css'
 import frontend_1 from './frontend_1.png'
 import frontend_2 from './frontend_2.png'
 import fullstack_1 from './fullstack_1.png'
 import fullstack_2 from './fullstack_2.png'
-import Errors from '../Error/Error'
+import Loading from '../Loading/Loadingpage'
 
 const Resume = () => {
+  const [loading, setLoading] = useState(true);
 
+  const imgsource = [frontend_1, frontend_2, fullstack_1, fullstack_2];
+
+  useEffect(() => {
+    let loadedImg = 0;
+    imgsource.map((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedImg++;
+        if (loadedImg == imgsource.length) {
+          setTimeout(() => {
+            setLoading(false);
+          }, 1000);
+        }
+      }
+    })
+  }, []);
+
+  if (loading) {
+    return (
+      <Loading />
+    )
+  }
   const shows = useRef();
   const back = useRef();
   const arr = [frontend_1, frontend_2, fullstack_1, fullstack_2];
@@ -22,8 +46,8 @@ const Resume = () => {
   function show(e) {
     shows.current.style.visibility = "visible";
     back.current.style.visibility = "hidden";
-    imgs_1.current.style.backgroundImage = `url(${arr[e]})`;
-    imgs_2.current.style.backgroundImage = `url(${arr[parseInt(e) + 1]})`;
+    imgs_1.current.src = arr[e];
+    imgs_2.current.src = arr[parseInt(e) + 1];
   }
 
   useEffect(() => {

@@ -36,7 +36,7 @@ const Skills = () => {
         if (loadedImg == imgsource.length) {
           setTimeout(() => {
             setLoading(false);
-          }, 2000);
+          }, 1000);
         }
       }
     })
