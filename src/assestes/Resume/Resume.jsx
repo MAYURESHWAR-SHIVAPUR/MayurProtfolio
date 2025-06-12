@@ -9,6 +9,11 @@ import Loading from '../Loading/Loadingpage'
 const Resume = () => {
   const [loading, setLoading] = useState(true);
 
+  const shows = useRef();
+  const back = useRef();
+  const arr = [frontend_1, frontend_2, fullstack_1, fullstack_2];
+  const imgs_1 = useRef();
+  const imgs_2 = useRef();
   const imgsource = [frontend_1, frontend_2, fullstack_1, fullstack_2];
 
   useEffect(() => {
@@ -32,11 +37,6 @@ const Resume = () => {
       <Loading />
     )
   }
-  const shows = useRef();
-  const back = useRef();
-  const arr = [frontend_1, frontend_2, fullstack_1, fullstack_2];
-  const imgs_1 = useRef();
-  const imgs_2 = useRef();
 
   function hide() {
     shows.current.style.visibility = "hidden";
