@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState  } from 'react'
 import ResumeCss from './ResumeCss.module.css'
 import frontend_1 from './frontend_1.png'
 import frontend_2 from './frontend_2.png'
