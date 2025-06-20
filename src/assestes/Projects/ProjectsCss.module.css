@@ -36,6 +36,7 @@ body {
 }
 
 .mobile {
+    aspect-ratio: 9/16;
     border-radius: 15px;
     background-color: aqua;
     display: inline-block;
@@ -82,7 +83,7 @@ body {
 
 @media (max-width:426px) {
     .outer {
-        width: calc(100% - 40px);
+        width: calc(100%);
         padding: 20px;
     }
 
@@ -103,7 +104,7 @@ body {
     }
 
     .mobile {
-        aspect-ratio: 9/20;
+        aspect-ratio: 9/16;
         max-width: 50%;
         margin: 50px auto;
     }
@@ -117,7 +118,7 @@ body {
 
 @media (min-width:427px) and (max-width:1030px) {
     .outer {
-        width: calc(100% - 20px);
+        width: calc(100%);
         padding: 20px;
     }
 
@@ -138,7 +139,7 @@ body {
     }
 
     .mobile {
-        aspect-ratio: 9/20;
+        aspect-ratio: 9/16;
         min-width: 20%;
         max-width: 50%;
     }
@@ -166,7 +167,7 @@ body {
     }
 
     .mobile {
-        aspect-ratio: 9/20;
+        aspect-ratio: 9/16;
         min-width: 20%;
         max-width: 50%;
     }

@@ -6,7 +6,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
     display: grid;
     place-content: center;
     animation: shows 4s ease-in 5s 1 forwards;

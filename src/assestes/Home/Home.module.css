@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-
 .outer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 50px 20px;
-    width: calc(100% - 20px);
+    padding: 70px 20px !important;
+    width: calc(100% - 40px);
     height: 100vh;
     position: relative;
-    animation: shows 2s ease-in-out 0s 1 forwards;
 }
 
 .outer p {
-    font-weight: 300;
+    font-weight: 100;
     font-size: medium;
-    font-family: "Robot";
+    line-height: 25px;
 }
 
 @keyframes shows {
@@ -23,25 +20,33 @@
     }
 }
 
-.fonts {
-    font-family: Verdana, Tahoma;
-}
 
 .outer div {
     position: relative;
     height: fit-content;
     width: 35%;
-    animation: shows 1s ease-in-out 8s 1 forwards;
+    animation: shows 1s ease-in-out 0s 1 forwards;
 }
 
 .outer h1 {
-    margin: 0;
-    font-family: Verdana, Tahoma, sans-serif;
-    /* text-decoration: underline; */
+    font-family: "Volkhov";
+    font-weight: 600;
+    margin-bottom: 0% !important;
 }
 
-.outer span {
+.outer h3,
+.outer h3 span {
+    font-style: italic;
+    font-weight: 100;
+    font-family: "Lemonada";
+    font-size: medium !important;
+}
+
+.outer h3 span {
     color: var(--text-higlight);
+    font-weight: bolder !important;
+    font-style: italic;
+
 }
 
 .outer h1,
@@ -57,9 +62,10 @@ p {
     width: 35px;
     border: 2px solid var(--text-higlight);
     border-radius: 50%;
-    /* margin: 0px 14px; */
+    position: relative;
     text-decoration: none;
     color: var(--text-higlight);
+    transition: all 0.5s ease-in-out;
 
     &:hover {
         transform: scale(1.1);
@@ -67,21 +73,24 @@ p {
 }
 
 .outer a i {
-    position: relative;
-    left: 30%;
-    top: 23%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+    color: var(--text-higlight);
 }
 
 .outer .Download {
-    width: 102px;
+    width: fit-content;
     border-radius: 15px;
     padding: 0px 23px;
     margin: 0;
     text-align: center;
     background-color: var(--bg-color);
     color: var(--text-higlight);
-    height: 30px;
-    padding-top: 10px;
+    height: fit-content;
+    padding: 15px;
     font-weight: bolder;
     box-shadow: 0 0 22px 0px var(--text-higlight);
     margin-right: 15px;
@@ -178,41 +187,27 @@ p {
 .child1 .lines {
     position: absolute;
     height: 30px;
-    top: 53px;
-    width: 166px;
+    top: 45px;
+    left: 12%;
+    width: 220px;
     animation: moves 4s ease-in-out 0.5s infinite;
-    mix-blend-mode: difference;
-    background: var(--text-higlight);
-    border-right: 4px solid white;
+    mix-blend-mode: color;
+    background-color: var(--bg-color);
+    border-right: 7px solid navy;
 }
 
 @keyframes moves {
-    0% {
-        left: 5%;
-    }
 
     50% {
-        left: 5%;
         width: 10px;
     }
-
-    100% {
-        left: 5%;
-    }
-}
-
-
-
-i::before {
-    color: var(--text-higlight);
-    font-weight: 900;
 }
 
 
 /* responsiveness */
 @media (max-width:320px) {
     .outer {
-        width: calc(100% - 20px);
+        width: calc(100%);
         font-size: small;
         padding: 20px 10px;
         overflow-x: hidden;
@@ -226,8 +221,18 @@ i::before {
         width: 100%;
     }
 
+    .outer a i {
+        font-size: medium;
+    }
+
     .outer h1 {
         margin-bottom: 10px;
+    }
+
+    .outer p {
+        font-size: small;
+        hyphens: auto;
+        line-height: 25px;
     }
 
     .outer .lines {
@@ -256,12 +261,14 @@ i::before {
 
 @media (min-width:321px) and (max-width : 699px) {
     .outer {
-        width: calc(100% - 20px);
+        width: calc(100%);
         font-size: small;
-        padding: 20px 10px;
+        padding: 100px 10px !important;
         overflow-x: hidden;
         overflow-y: scroll;
         display: block;
+        margin-left: 0;
+        z-index: 5;
     }
 
     .outer .child1,
@@ -270,9 +277,20 @@ i::before {
         width: 100%;
     }
 
+    .outer a i {
+        font-size: large;
+    }
+
+
+    .outer p {
+        font-size: small;
+        hyphens: auto;
+        line-height: 25px;
+    }
+
     .outer .child1 {
         padding: 0 10px;
-        width: calc(100% - 20px);
+        width: calc(100%);
     }
 
     .outer h1 {
@@ -318,12 +336,17 @@ i::before {
         width: 50%;
     }
 
+    .outer a i {
+        font-size: large;
+    }
+
     .outer h1 {
         margin-bottom: 10px;
     }
 
     .outer .lines {
-        display: none;
+        top: 48px;
+        left: 24%;
     }
 
 
@@ -374,7 +397,7 @@ i::before {
     }
 
     .outer .lines {
-        display: none;
+        left: 21%;
     }
 
     .outer a {
@@ -396,6 +419,12 @@ i::before {
         height: 300px;
         margin: 0%;
         padding: 0;
+    }
+}
+
+@media (min-width:834px) and (max-width : 1025px) {
+    .outer .lines {
+            left: 17.5%;
     }
 }
 
@@ -427,9 +456,9 @@ i::before {
         font-size: larger;
     }
 
-    .outer .lines {
+    /* .outer .lines {
         display: none;
-    }
+    } */
 
 
     .outer a {
@@ -459,7 +488,7 @@ i::before {
     .outer {
         width: calc(100% - 20px);
         height: fit-content;
-        padding: 40px 10px;
+        padding: 40px 10px !important;
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -476,6 +505,7 @@ i::before {
 
     .outer h3 {
         font-size: x-large;
+        margin-bottom: -25px;
     }
 
     .outer h4 {

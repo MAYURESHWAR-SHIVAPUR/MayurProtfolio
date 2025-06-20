@@ -13,7 +13,7 @@ const About = () => {
     img.onload = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 4000);
     }
     img.onerror = (e) => {
       console.log("error", e.message);
@@ -30,6 +30,7 @@ const About = () => {
         <h2>Hi, I'm <b className={AboutCss.fonts}>MAYURESHWAR</b> </h2>
         <p> I have a strong foundation in front-end and back-end web development, with hands-on experience using HTML, CSS, and JavaScript to build interactive and responsive user interfaces. I am proficient in React.js and Tailwind CSS, which I use to create modern and dynamic web applications with clean and efficient code. On the server-side, I work with Node.js and Express.js to develop scalable APIs and backend logic. I manage databases effectively using Mongoose with MongoDB, ensuring efficient data handling and performance. Additionally, I am skilled in EJS for server-side templating and use Git and GitHub for version control and collaborative development, maintaining clean and organized repositories throughout my projects.
         </p>
+        <br /><br />
         <h2 className={AboutCss.fonts}>Educational History</h2>
         <h3> Bachelor of Engineering (2022 - 2026)</h3>
         <p> I am currently pursuing my Engineering degree in Computer Science Engineering at

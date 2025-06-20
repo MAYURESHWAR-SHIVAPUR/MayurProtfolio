@@ -6,9 +6,11 @@ const Portfolio = () => {
   return (
     <>
       <header className={PortfolioCss.Nav_outer}>
-        <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to="/portfolio/project">Projects</NavLink>
-        <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to='/portfolio/certificates'>Certificates</NavLink>
-        <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to='/portfolio/skill'>Languages</NavLink>
+        <div className={PortfolioCss.block}>
+          <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to="/portfolio/project">Projects</NavLink>
+          <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to='/portfolio/certificates'>Certificates</NavLink>
+          <NavLink className={({ isActive }) => isActive ? PortfolioCss.Active : ""} to='/portfolio/skill'>Languages</NavLink>
+        </div>
         <Outlet />
       </header>
     </>

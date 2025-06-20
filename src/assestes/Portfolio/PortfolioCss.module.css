@@ -3,15 +3,22 @@
     height: 60px;
     margin: 28px 0px;
     background: var(--bg-radial);
-    padding: 10px 0;
+    padding: 70px 0;
     width: 100%;
     margin: auto;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    width: 100%;
 }
 
 /* 7f7f7f */
 .Nav_outer a {
     font-size: x-large;
-    font-family: Verdana, Tahoma, sans-serif;
     text-decoration: none;
     height: 70%;
     width: 30%;
@@ -24,11 +31,11 @@
 }
 
 .Nav_outer .Active {
-    color: var(--bg-higlight);
-    border-radius: 15px;
-    border: 2px solid white;
-    background-color: #0000ff6a;
+    color: var(--text-higlight);
+    transition: all 1s ease-in-out;
+    font-family: "Volkhov";
 }
+
 
 @media (max-width:584px) {
     .Nav_outer {
@@ -36,12 +43,24 @@
     }
 
     .Nav_outer a {
-        position: relative;
-        width: 20%;
-        margin-left: 10%;
-        overflow-y: hidden;
         font-size: smaller;
         height: 50px;
+    }
+
+    .Nav_outer .Active {
+        animation: motions 1s ease-out 0s 1 forwards;
+    }
+}
+
+@keyframes motions {
+    100% {
+        border-radius: 15px;
+        border: 2px solid white;
+        padding: 15px;
+        width: fit-content;
+        font-size: medium;
+        background-color: var(--skill-bg);
+
     }
 }
 
@@ -58,12 +77,54 @@
         font-size: large;
         height: 50px;
     }
+
+    .Nav_outer .Active {
+        animation: motions_2 1s ease-out 0s 1 forwards;
+    }
+}
+
+@keyframes motions_2 {
+    100% {
+        border-radius: 15px;
+        border: 2px solid white;
+        padding: 15px;
+        width: fit-content;
+        font-size: large;
+        background-color: var(--skill-bg);
+
+    }
 }
 
 @media (min-width:761px) and (max-width:1065px) {
+    .Nav_outer {
+        position: relative;
+        height: fit-content;
+        margin: 0px;
+        background: var(--bg-radial);
+        padding: 0;
+        width: 100%;
+        margin: auto;
+    }
+
     .Nav_outer a {
         font-size: large;
         width: 20%;
         margin-left: 10%;
+    }
+
+    .Nav_outer .Active {
+        animation: motions_3 1s ease-out 0s 1 forwards;
+    }
+}
+
+@keyframes motions_3 {
+    100% {
+        border-radius: 15px;
+        border: 2px solid white;
+        padding: 15px;
+        /* width: fit-content; */
+        font-size: large;
+        background-color: var(--skill-bg);
+
     }
 }

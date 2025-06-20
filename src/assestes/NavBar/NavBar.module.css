@@ -17,11 +17,17 @@
     justify-content: space-between;
     padding: 0 50px;
     border-bottom: 1px solid var(--text-color);
-    overflow-x: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--bg-radial);
+    z-index: 10;
 }
 
-.outer h1 {
-    font-family: Verdana, Tahoma, sans-serif;
+.outer h1 b {
+    font-family: "Rakkas";
+    opacity: 0.65;
 }
 
 .outer h1,
@@ -53,19 +59,19 @@ p {
     color: var(--text-higlight);
     outline: none;
     border: 2px solid transparent;
-    font-size: xx-large;
+    font-size: x-large;
     position: relative;
     right: 0%;
 }
-i:active{
-    transformer:rotate(90deg);
+
+i:active {
+    transformer: rotate(90deg);
 }
 
 @media (max-width:699px) {
     .outer {
-        /* position: relative; */
         height: 60px;
-        width: 95%;
+        width: calc(100%);
         font-size: xx-small;
         padding: 0 10px;
         overflow-x: hidden;
@@ -73,21 +79,23 @@ i:active{
 
     .outer button {
         visibility: visible;
+        z-index: 20;
     }
 
     .outer section {
         visibility: hidden;
-        position: absolute;
-        width: 80px;
+        position: fixed;
+        width: 100px;
         display: block;
         height: fit-content;
-        top: 67px;
-        right: -14px;
-        z-index: 10;
+        top: 8px;
+        right: -6px;
+        z-index: 30000;
         background-color: var(--bg-color);
         padding-left: 10px;
         border: 2px solid;
         border-radius: 15px;
+        padding: 10px;
     }
 
     .outer section a {
@@ -100,7 +108,7 @@ i:active{
 @media (min-width:700px) and (max-width:770px) {
     .outer {
         position: relative;
-        width: calc(100% - 20px);
+        width: calc(100%);
         padding: 0 10px;
     }
 
@@ -118,14 +126,11 @@ i:active{
 @media (min-width:771px) {
     .outer {
         position: relative;
-        width: calc(100% - 20px);
+        width: calc(100%);
         padding: 0 10px;
         height: 100px;
     }
 
-    .outer section {
-        visibility: visible;
-    }
 
     .outer section a {
         font-size: larger;

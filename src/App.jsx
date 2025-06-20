@@ -10,6 +10,7 @@ import Projects from './assestes/Projects/Projects'
 import Certificate from './assestes/Certificate/Certificate'
 import Skills from './assestes/Skills/Skills'
 import Errors from './assestes/Error/Error'
+import Loading from './assestes/Loading/Loadingpage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 
@@ -56,6 +57,9 @@ const router = createBrowserRouter([
       <NavBar />
       <Errors />
     </div>
+  }, {
+    path: "/load",
+    element:<Loading />
   }
 ])
 

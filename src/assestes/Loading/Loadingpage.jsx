@@ -1,12 +1,20 @@
-import LoadingCss from './LodingCss.module.css'
 
+import styles from './LodingCss.module.css';
 const Loadingpage = () => {
 
   return (
-    <div className={LoadingCss.center}>
-      <div className={LoadingCss.img}></div>
-      <br />
-      <h1>Loading please Wait...</h1>
+    <div className={styles.outer}>
+      <div className={styles.wrapper}>
+        <div className={styles.boxWrap}>
+          <div className={`${styles.box} ${styles.one}`}></div>
+          <div className={`${styles.box} ${styles.two}`}></div>
+          <div className={`${styles.box} ${styles.three}`}></div>
+          <div className={`${styles.box} ${styles.four}`}></div>
+          <div className={`${styles.box} ${styles.five}`}></div>
+          <div className={`${styles.box} ${styles.six}`}></div>
+        </div>
+        <h1>Just a moment...</h1>
+      </div>
     </div>
   )
 }

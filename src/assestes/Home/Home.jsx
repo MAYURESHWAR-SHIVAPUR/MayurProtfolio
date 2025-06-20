@@ -24,13 +24,11 @@ const Profile = () => {
   return (
     <div className={HomeCss.outer}>
       <div className={HomeCss.child1}>
-        <h1>I'm <u className={HomeCss.fonts}>Mayureshwar S</u> </h1>
+        <h1>I'm <u>Mayureshwar</u></h1>
         <div className={HomeCss.lines}></div>
-        <br />
-        <h3>Aspiring<span style={{ textOverflow: "hidden" }}> Mernstack Developer</span></h3>
+        <h3>Aspiring<span> Mernstack Developer</span></h3>
         <br /><br />
         <h4>Quick Intro</h4>
-        <br />
         <p> I am a passionate Web Developer and a Computer Science Engineering student at Cauvery Institute of Technology, Mandya, with a strong interest in software development and problem-solving. My journey in technology began with a curiosity to build and create, leading me to develop projects in web development and application design. I have hands-on experience in Java, along with knowledge of front-end and back-end technologies. My ability to collaborate effectively, communicate ideas clearly and adapt to new challenges sets me apart in team environments. I enjoy working on innovative solutions and continuously expanding my skill set.</p>
         <br /><br />
         <a className={HomeCss.Download} href="">Download CV</a>

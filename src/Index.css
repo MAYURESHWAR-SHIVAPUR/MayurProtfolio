@@ -14,7 +14,7 @@
     :root {
         --bg-color: black;
         --text-color: white;
-        --bg-radial: radial-gradient(circle,navy , black);
+        --bg-radial: radial-gradient(circle, navy, black);
         --bg-other: var(--bg-radial);
         --text-higlight: #12ff00;
         --skill-bg: #2a2a2a;
@@ -29,18 +29,36 @@
             --bg-radial: linear-gradient(to bottom, #2B1B17, #3D2022, #2B1B17);
             --bg-other: var(--bg-radial);
             --text-higlight: #EaD66B;
-            --skill-bg: #3D2B1F;
+            --skill-bg: white;
         }
     }
+
     @media (prefers-color-scheme: light) {
-    :root {
+        :root {
+            --bg-color: #c6ac8f;
+            --bg-radial: radial-gradient(circle, #eae0d5, #c6ac8f);
+            --bg-other: var(--bg-radial);
+            --text-color: #22333b;
+            --text-higlight: #704e2e;
+            --proj-color: linear-gradient(to right, white, skyblue, white);
+            --skill-bg: white;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* :root {
         --bg-color: white;
-        --bg-radial: radial-gradient(circle, white, skyblue);
+        --bg-radial: radial-gradient(circle,#ffffff , #e5e5e5);
         --bg-other: var(--bg-radial);
         --text-color: black;
         --text-higlight: #0F5298;
         --proj-color: linear-gradient(to right, white, skyblue, white);
         --skill-bg: white;
-    }
-    }
-}
+    } */

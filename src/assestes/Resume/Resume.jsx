@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ResumeCss from './ResumeCss.module.css'
 import frontend_1 from './frontend_1.png'
 import frontend_2 from './frontend_2.png'
@@ -8,35 +8,35 @@ import Loading from '../Loading/Loadingpage'
 
 const Resume = () => {
   const [loading, setLoading] = useState(true);
-
-  const imgsource = [frontend_1, frontend_2, fullstack_1, fullstack_2];
-
-  useEffect(() => {
-    let loadedImg = 0;
-    imgsource.map((src) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        loadedImg++;
-        if (loadedImg == imgsource.length) {
-          setTimeout(() => {
-            setLoading(false);
-          }, 1000);
-        }
-      }
-    })
-  }, []);
-
-  if (loading) {
-    return (
-      <Loading />
-    )
-  }
+  
   const shows = useRef();
   const back = useRef();
   const arr = [frontend_1, frontend_2, fullstack_1, fullstack_2];
   const imgs_1 = useRef();
   const imgs_2 = useRef();
+  const imgsource = [frontend_1, frontend_2, fullstack_1, fullstack_2];
+
+  useEffect(() => {
+    let loadedImg = 0;
+    imgsource.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedImg++;
+        if (loadedImg === imgsource.length) {
+          setTimeout(() => {
+            setLoading(false);
+          }, 1000);
+        }
+      };
+    });
+  }, []);
+
+  useEffect(() => {
+    if (shows.current) {
+      shows.current.style.visibility = "hidden";
+    }
+  }, []);
 
   function hide() {
     shows.current.style.visibility = "hidden";
@@ -50,14 +50,14 @@ const Resume = () => {
     imgs_2.current.src = arr[parseInt(e) + 1];
   }
 
-  useEffect(() => {
-    shows.current.style.visibility = "hidden";
-  }, []);
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <>
-      <h1>MY <span className={ResumeCss.fonts}>Resume</span> </h1>
+      <h1>MY <span className={ResumeCss.fonts}>Resume</span></h1>
       <div ref={back} className={ResumeCss.outer}>
-
         <div className={ResumeCss.resume}>
           <div className={ResumeCss.frontend}>
             <img src={frontend_1} alt="" />
@@ -77,8 +77,8 @@ const Resume = () => {
           <button onClick={() => show(2)}>Read</button>
           <button className={ResumeCss.download}>Download</button>
         </div>
-
       </div>
+
       <div ref={shows} className={ResumeCss.Reading}>
         <div className={ResumeCss.image}>
           <img ref={imgs_1} alt="" />
@@ -87,9 +87,8 @@ const Resume = () => {
         <button onClick={hide} className={ResumeCss.showButton}>Cancel</button>
       </div>
     </>
-  )
+  );
+};
 
-
-}
 
 export default Resume
