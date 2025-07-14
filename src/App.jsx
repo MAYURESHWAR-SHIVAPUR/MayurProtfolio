@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './assestes/Home/Home'
 import About from './assestes/About/About'
-import Contact from './assestes/Contact/Contact'
+// import Contact from './assestes/Contact/Contact'
 import Resume from './assestes/Resume/Resume'
 import NavBar from './assestes/NavBar/NavBar'
 import Animation from './assestes/Animation/Animation'

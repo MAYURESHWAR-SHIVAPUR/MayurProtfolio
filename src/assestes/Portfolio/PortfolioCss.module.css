@@ -128,3 +128,17 @@
 
     }
 }
+
+@media (min-width:1066px) {
+    .Nav_outer .Active {
+        animation: motions_3 1s ease-out 0s 1 forwards;
+    }
+
+    .Nav_outer {
+        position: relative;
+        height: fit-content;
+        background: var(--bg-radial);
+        padding: 7px 0;
+        width: 100%;
+    }
+}

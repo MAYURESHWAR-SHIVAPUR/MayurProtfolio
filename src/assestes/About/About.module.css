@@ -37,6 +37,7 @@
 .child1 p {
     text-align: justify;
     line-height: 25px;
+    font-size: medium !important;
 }
 
 .child1 h3 {
@@ -176,7 +177,7 @@
 
     .outer .child1 p {
         font-weight: 300;
-        font-size: small;
+        font-size: medium;
     }
 
     .outer .child2 {
@@ -229,7 +230,7 @@
 
     .outer p {
         font-weight: 300;
-        font-size: small;
+        font-size: medium;
     }
 
     .outer a {

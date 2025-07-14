@@ -6,6 +6,7 @@ import mayur from './mayur.png'
 const Profile = () => {
   const imgsorce = mayur;
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const img = new Image();
     img.src = imgsorce;
@@ -21,6 +22,9 @@ const Profile = () => {
       <Loading />
     )
   }
+
+
+  
   return (
     <div className={HomeCss.outer}>
       <div className={HomeCss.child1}>
