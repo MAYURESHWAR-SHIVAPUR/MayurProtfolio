@@ -48,3 +48,8 @@ body {
     width: fit-content;
 }
 
+.animate_Img{
+    height: auto;
+    width: auto;
+    display: block;
+}

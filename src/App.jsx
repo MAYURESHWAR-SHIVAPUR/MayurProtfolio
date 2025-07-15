@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from './assestes/Home/Home'
 import About from './assestes/About/About'
 // import Contact from './assestes/Contact/Contact'
@@ -37,10 +37,10 @@ const router = createBrowserRouter([
       {
         path: "project",
         element: <Projects />
-      },{
+      }, {
         path: "certificates",
         element: <Certificate />
-      },{
+      }, {
         path: "skill",
         element: <Skills />
       },
@@ -59,16 +59,27 @@ const router = createBrowserRouter([
     </div>
   }, {
     path: "/load",
-    element:<Loading />
+    element: <Loading />
   }
 ])
 
 function App() {
+
+  const [showIntro, setShowIntro] = useState(true);
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+
+      setShowIntro(false);
+    
+    }, 9200); // 6.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div>
       <title> Mayureshwar</title>
-      <Animation />
-      <RouterProvider router={router} />
+      {showIntro ? <Animation /> :<RouterProvider router={router} />}
     </div>
   )
 }

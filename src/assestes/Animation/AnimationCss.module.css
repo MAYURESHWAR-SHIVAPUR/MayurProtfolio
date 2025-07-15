@@ -1,15 +1,14 @@
 .outer {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     opacity: 1;
     background: var(--bg-other);
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 100;
     display: grid;
     place-content: center;
-    animation: shows 4s ease-in 5s 1 forwards;
 }
 
 @keyframes shows {
@@ -20,12 +19,14 @@
     100% {
         margin-top: 1000px;
         display: none;
+        opacity: 0;
     }
 }
 
 .outer section {
     margin: 20px 30%;
     width: 100%;
+    animation: shows 4s ease-in 5s 1 forwards;
 }
 
 .outer button {

@@ -6,19 +6,36 @@ import { useGSAP } from '@gsap/react';
 
 
 const NavBar = () => {
+  const sectionRef = useRef();
+  const section = useRef();
+  let visible = true;
+
   useGSAP(() => {
-    gsap.from("section .a", {
+    gsap.from(".portpolio", {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+      delay: 0,
+    })
+
+    gsap.from(sectionRef.current, {
       y: -50,
       opacity: 0,
       duration: 2,
-      delay: 6,
-      stagger:1,
+      delay: 0.5,
     })
+
+    gsap.from(`section .a`, {
+      y: -50,
+      opacity: 0,
+      duration: 2,
+      delay: 1.5,
+      stagger: 0.7,
+    })
+    
   }, []);
 
 
-  const section = useRef();
-  let visible = true;
 
   function handelclick() {
     if (visible) {
@@ -55,12 +72,12 @@ const NavBar = () => {
 
   return (
     <div className={NavCss.outer}>
-      <h1><b>Portfolio</b></h1>
+      <h1 className='portpolio'><b>Portfolio</b></h1>
       <button onClick={handelclick}>
         <i className="fa-solid fa-bars"></i>
       </button>
       <section ref={section} className={NavCss.navSection}>
-        <NavLink className={({ isActive }) => isActive ? NavCss.Active : "a"} to='/'>Home</NavLink>
+        <NavLink ref={sectionRef} className={({ isActive }) => isActive ? NavCss.Active : "a"} to='/'>Home</NavLink>
         <NavLink className={({ isActive }) => isActive ? NavCss.Active : "a"} to='/about'>About</NavLink>
         <NavLink className={({ isActive }) => isActive ? NavCss.Active : "a"} to='/portfolio/project'>Portfolio</NavLink>
         <NavLink className={({ isActive }) => isActive ? NavCss.Active : "a"} to='/contact'>Contact</NavLink>
