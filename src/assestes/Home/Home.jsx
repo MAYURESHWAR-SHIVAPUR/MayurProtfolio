@@ -48,7 +48,7 @@ const Home = () => {
           scrollTrigger:{ 
             trigger:".animate_Img",
             scroller:"body",
-            start:"top 55%"
+            start:"top 0%",
           }
         });
 

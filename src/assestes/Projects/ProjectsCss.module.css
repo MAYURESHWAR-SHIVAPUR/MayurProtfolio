@@ -98,6 +98,24 @@ body {
     margin: 10px 10%;
 }
 
+
+#string{
+    height: 200px;
+    width: 100%;
+}
+
+path{
+    height: 100%;
+    width: 100%;
+    stroke: var(--text-higlight);
+}
+svg{
+    z-index: 50;
+    width: 100%;
+}
+
+
+
 @media (max-width:426px) {
     .outer {
         width: calc(100%);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Outlet } from "react-router"
 import ProjectsCss from './ProjectsCss.module.css'
 import Cards from './Cards'
@@ -18,38 +18,47 @@ import N3 from "./img/N3.png";
 import N4 from "./img/N4.png";
 import N5 from "./img/N5.png";
 import N6 from "./img/N6.png";
-// import { useEffect, useState } from 'react';
-// import Errors from '../Error/Error'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Projects = () => {
 
+  // animation
+  const intialPath = `M 0 100 Q ${window.innerWidth / 2} 100 ${window.innerWidth} 100`;
+  const finalPath = `M 0 100 Q ${window.innerWidth / 2} 100 ${window.innerWidth} 100`;
+  const strings = useRef();
+  const valv = useRef();
 
-  // const [loading, setLoading] = useState(true);
+  useGSAP(() => {
 
-  // const imgsource = [];
-  // useEffect(() => {
-  //   let loadedImg = 0;
-  //   imgsource.map((src) => {
-  //     const img = new Image();
-  //     img.src = src;
-  //     img.onload = () => {
-  //       loadedImg++;
-  //       if (loadedImg == imgsource.length) {
-  //         setTimeout(() => {
-  //           setLoading(false);
-  //         }, 1000);
-  //       }
-  //     }
-  //   })
-  // }, []);
+    const svgY = 100;
 
-  // if (loading) {
-  //   return (
-  //     <Errors />
-  //   )
-  // }
+    strings.current.addEventListener("mousemove", (e) => {
+      const rect = strings.current.getBoundingClientRect();
+      const relativeY = e.clientY - rect.top;
+      const relativeX = e.clientX - rect.left;
+
+      const path = `M 0 ${svgY} Q ${relativeX} ${relativeY} ${window.innerWidth} ${svgY}`;
+
+      gsap.to("svg path", {
+        attr: { d: path },
+        duration: 0.4,
+        ease: "power4.out",
+      });
+    });
+
+    strings.current.addEventListener("mouseleave", () => {
+      const path = `M 0 ${svgY} Q ${window.innerWidth / 2} ${svgY} ${window.innerWidth} ${svgY}`;
+
+      gsap.to("svg path", {
+        attr: { d: path },
+        duration: 0.6,
+        ease: "elastic.out(1, 0.1)",
+      });
+    });
 
 
+  }, [])
 
   // frontend first 
   const info_1 = "This web app features over six unique games, offering both single-player modes and AI - based gameplay.Developed using React, it showcases my  expertise in building interactive applications, implementing login systems, and crafting engaging user experiences with creativity.";
@@ -83,19 +92,24 @@ const Projects = () => {
 
       <h1>Frontend Projects</h1>
       <br />
-      <Cards title="Interactive web Game" Basic_info={info_1} ul={ul_1} moreData={moreData_1} host="https://gammingwithmayur.netlify.app/" git='' imgs={imgs_f1}/>
+      <Cards title="Interactive web Game" Basic_info={info_1} ul={ul_1} moreData={moreData_1} host="https://gammingwithmayur.netlify.app/" git='' imgs={imgs_f1} />
       <Cards title="Upcomming" Basic_info="Not Yet Developed I will Make it soon" ul={ul_1} moreData="No Data avalible" />
 
       <br /><br /><br />
 
       <h3>Note : This project is also Developed by me!</h3>
 
-      <br /><br /><hr />
+      <br /><br />
+      <div id={ProjectsCss.strings}>
+        <svg ref={strings} width="500" height="200" >
+          <path  d={finalPath} stroke="" fill="transparent" />
+        </svg>
+      </div>
 
       <br />
       <h1>Backend Projects</h1>
       <br />
-      <Cards title="👗 Fashora Shopping Website" Basic_info={info_3} ul={ul_3} moreData={moreData_1}  imgs={imgs_b1} />
+      <Cards title="👗 Fashora Shopping Website" Basic_info={info_3} ul={ul_3} moreData={moreData_1} imgs={imgs_b1} />
       <Cards title=" TalkBridge" Basic_info={info_4} ul={ul_3} moreData={moreData_1} />
 
     </div>
